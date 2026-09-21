@@ -7,6 +7,12 @@ load_dotenv()
 
 HF_TOKEN = os.getenv("HF_TOKEN")
 
+if not HF_TOKEN:
+    try:
+        HF_TOKEN = st.secrets["HF_TOKEN"]
+    except Exception:
+        HF_TOKEN = None
+
 
 @st.cache_resource
 def load_model():
