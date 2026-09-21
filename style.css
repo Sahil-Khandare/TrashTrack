@@ -1,0 +1,145 @@
+.stApp {
+    background: transparent !important;
+}
+
+.stApp::before {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("__BG_IMAGE__");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    z-index: -1;
+}
+
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+    background: transparent !important;
+}
+
+[data-testid="stSidebar"] {
+    background: transparent !important;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+[data-testid="stSidebar"]::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("__BG_IMAGE__");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    z-index: 0;
+}
+
+
+[data-testid="stSidebar"] > div:first-child {
+    position: relative;
+    z-index: 1;
+
+    background: transparent !important;
+}
+
+[data-testid="stSidebarContent"],
+[data-testid="stSidebarUserContent"] {
+    background: transparent !important;
+}
+
+.sidebar-title {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 18px;
+    padding-left: 5px;
+}
+
+.category-item {
+    display: flex;
+    text-align: center;
+    background: rgba(92, 110, 98, 0.75);
+    border-radius: 8px;
+
+    padding: 14px 16px;
+    margin-bottom: 10px;
+
+    color: #eeeeee;
+    font-size: 15px;
+    font-weight: 400;
+
+    transition: background 0.2s ease;
+}
+
+.category-item:hover {
+    background: rgba(35, 55, 38, 0.9);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.bmc-footer {
+    text-align: left;
+
+    padding: 20px;
+
+    margin-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bmc-footer p {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+.bmc-footer a {
+    color: #d27205;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bmc-footer a:hover {
+    color: #b40505;
+
+    text-decoration: underline;
+}
+
+[data-testid="stFileUploaderDropzone"] {
+    padding: 8px 14px !important;
+    min-height: unset !important;
+}
+
+[data-testid="stFileUploader"] {
+    border-radius: 12px;
+    padding: 5px;
+    max-width: 300px;   
+}   
